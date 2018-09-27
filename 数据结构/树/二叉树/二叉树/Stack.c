@@ -7,110 +7,49 @@
 //
 
 #include "Stack.h"
-#include <stdlib.h>
 
-Stack createStack()
+//创建栈
+Stack InitStack(void)
 {
     //可能分配失败 内存不足
-    Stack s = (Stack)malloc(sizeof(struct LinkStack));
-    s->top = NULL;
-    s->count = 0;
-    return s;
+    Stack stack = (Stack)malloc(sizeof(struct LinkStack));
+    if (!stack) {
+        printf("分配内存失败\n");
+        return NULL;
+    }
+    stack->top = NULL;
+    stack->count = 0;
+    return stack;
 }
 
-void clearStack(Stack s)
+//栈是否空
+bool IsEmptyStack(Stack stack)
 {
-    StackPtr p;
-    while (s->top) {
-        p = s->top;
-        s->top = s->top->next;
-        s->count--;
+    return stack->top ? 0 : 1;
+}
+
+//入栈
+void PushStack(Stack stack, ElementType val)
+{
+    Ptr p = (Ptr)malloc(sizeof(struct Node));
+    if (!p) {
+        printf("分配内存失败\n");
+        exit(-1);
+    }
+    p->data = val;
+    p->next = stack->top;
+    stack->top = p;
+    stack->count++;
+}
+
+//出栈
+void PopStack(Stack stack, ElementType *val)
+{
+    if (!IsEmptyStack(stack)) {
+        Ptr p = stack->top;
+        *val = p->data;
+        stack->top = p->next;
+        stack->count--;
         free(p);
     }
 }
-
-void destroyStack(Stack s)
-{
-    clearStack(s);
-    free(s);
-}
-
-int isEmpty(Stack s)
-{
-    return s->top ? 0 : 1;
-}
-
-void getTop(Stack s, ElemType *item)
-{
-    if (!isEmpty(s)) {
-        *item = s->top->data;
-    }
-}
-
-void push(Stack s, ElemType item)
-{
-    StackPtr p = (StackPtr)malloc(sizeof(struct StackNode));
-    p->data = item;
-    p->next = s->top;
-    s->top = p;
-    s->count++;
-}
-
-void pop(Stack s, ElemType *item)
-{
-    if (!isEmpty(s)) {
-        StackPtr p = s->top;
-        *item = p->data;
-        s->top = p->next;
-        s->count--;
-        free(p);
-    }
-}
-
-int length(Stack s)
-{
-    return s->count;
-}
-
-void stackTraverse(Stack s)
-{
-    StackPtr p = s->top;
-    while (p) {
-//        printf("%d ",p->data);
-        p = p->next;
-    }
-    printf("\n");
-}
-
-void test()
-{
-//    printf("初始化栈并将1-10入栈\n");
-//    Stack s = createStack();
-//    for (int i = 1; i < 11; i++) {
-//        push(s, i);
-//    }
-//
-//    printf("栈中元素从栈顶依次为:\n");
-//    stackTraverse(s);
-//
-//    printf("栈长度:%d\n",length(s));
-//
-//    ElemType e;
-//    pop(s, &e);
-//    printf("第一次弹出的元素为:%d\n",e);
-//
-//    pop(s, &e);
-//    printf("第二次弹出的元素为:%d\n",e);
-//
-//    printf("栈是否空:%d(1:是，0:不是)\n",isEmpty(s));
-//
-//    getTop(s, &e);
-//    printf("当前栈顶的元素为:%d\n",e);
-//
-//    clearStack(s);
-//    printf("栈清空后，是否空:%d(1:是，0:不是)\n",isEmpty(s));
-//
-//    destroyStack(s);
-//    printf("栈销毁\n");
-}
-
