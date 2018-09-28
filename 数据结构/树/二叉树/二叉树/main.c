@@ -9,13 +9,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+#include "BinTree.h"
 
 int main(int argc, const char * argv[]) {
     
 //    test();
 //    ABD#G###CE##FH###
-
+    test();
     
     return 0;
 }

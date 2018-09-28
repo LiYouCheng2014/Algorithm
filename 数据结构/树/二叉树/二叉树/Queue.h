@@ -15,13 +15,6 @@
 
 #include "TreeNode.h"
 
-//结点
-struct Node {
-    ElementType data;
-    struct Node *next;
-};
-typedef struct Node *Ptr;
-
 //队列结构
 struct LinkQueue {
     Ptr front;//队头

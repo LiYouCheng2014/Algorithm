@@ -24,4 +24,11 @@ struct TreeNode {
 //堆
 typedef BinTree ElementType;
 
+//结点
+struct Node {
+    ElementType data;
+    struct Node *next;
+};
+typedef struct Node *Ptr;
+
 #endif /* Tree_h */

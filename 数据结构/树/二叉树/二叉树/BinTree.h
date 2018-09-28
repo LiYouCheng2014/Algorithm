@@ -11,4 +11,7 @@
 
 #include <stdio.h>
 
+//测试二叉树
+void test();
+
 #endif /* BinTree_h */

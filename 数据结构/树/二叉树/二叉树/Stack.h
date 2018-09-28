@@ -15,13 +15,6 @@
 
 #include "TreeNode.h"
 
-//结点
-struct Node{
-    ElementType data;
-    struct Node *next;
-};
-typedef struct Node *Ptr;
-
 //栈结构
 struct LinkStack {
     Ptr top;//栈顶
