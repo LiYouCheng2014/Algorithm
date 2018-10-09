@@ -10,6 +10,8 @@
 
 #include "SList.h"
 
+#include "LinkList.h"
+
 //测试用例
 void Test1()
 {
@@ -111,11 +113,14 @@ void Test4()
 
 int main(int argc, const char * argv[]) {
     
-    Test1();
+//    Test1();
 //    Test2();
 //    Test3();
 //    Test4();
-    system("pause");
+//    system("pause");
     
+//    LinkList *list = CreateList(3);
+//    PrintList(list);
+    test();
     return 0;
 }

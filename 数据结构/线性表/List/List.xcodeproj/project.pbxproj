@@ -10,6 +10,8 @@
 		048E6BF9216B878C00C6C488 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 048E6BF8216B878C00C6C488 /* main.c */; };
 		048E6C01216B87AA00C6C488 /* List.c in Sources */ = {isa = PBXBuildFile; fileRef = 048E6C00216B87AA00C6C488 /* List.c */; };
 		048E6C04216B971900C6C488 /* SList.c in Sources */ = {isa = PBXBuildFile; fileRef = 048E6C03216B971900C6C488 /* SList.c */; };
+		048E6C07216CD48E00C6C488 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 048E6C06216CD48E00C6C488 /* LinkList.c */; };
+		048E6C0A216CE02800C6C488 /* LinkListHead.c in Sources */ = {isa = PBXBuildFile; fileRef = 048E6C09216CE02800C6C488 /* LinkListHead.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		048E6C00216B87AA00C6C488 /* List.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = List.c; sourceTree = "<group>"; };
 		048E6C02216B971900C6C488 /* SList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SList.h; sourceTree = "<group>"; };
 		048E6C03216B971900C6C488 /* SList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SList.c; sourceTree = "<group>"; };
+		048E6C05216CD48E00C6C488 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		048E6C06216CD48E00C6C488 /* LinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
+		048E6C08216CE02800C6C488 /* LinkListHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListHead.h; sourceTree = "<group>"; };
+		048E6C09216CE02800C6C488 /* LinkListHead.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkListHead.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,10 @@
 				048E6C00216B87AA00C6C488 /* List.c */,
 				048E6C02216B971900C6C488 /* SList.h */,
 				048E6C03216B971900C6C488 /* SList.c */,
+				048E6C05216CD48E00C6C488 /* LinkList.h */,
+				048E6C06216CD48E00C6C488 /* LinkList.c */,
+				048E6C08216CE02800C6C488 /* LinkListHead.h */,
+				048E6C09216CE02800C6C488 /* LinkListHead.c */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -129,6 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				048E6C04216B971900C6C488 /* SList.c in Sources */,
+				048E6C07216CD48E00C6C488 /* LinkList.c in Sources */,
+				048E6C0A216CE02800C6C488 /* LinkListHead.c in Sources */,
 				048E6BF9216B878C00C6C488 /* main.c in Sources */,
 				048E6C01216B87AA00C6C488 /* List.c in Sources */,
 			);
